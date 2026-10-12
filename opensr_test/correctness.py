@@ -1,12 +1,13 @@
-from typing import List, Optional, Tuple
+from jaxtyping import List, Optional, Tuple, Array
 
-import numpy as np
+import jax
+import jax.numpy as jnp
 import torch
 from opensr_test.distance import get_distance
 
 
 def sigm(x):
-    return 1 / (1 + np.exp(-(x - 0) / 1))
+    return 1 / (1 + jnp.exp(-(x - 0) / 1))
 
 
 def get_distances(
@@ -187,7 +188,7 @@ def softmin(x: torch.Tensor, T: float = 0.75) -> torch.Tensor:
     Compute the softmin of vector x with temperature T.
 
     Parameters:
-        x (torch.Tensor): The input tensor.
+        x (torch.Tensor): The ijnput tensor.
         T (float): The temperature parameter. Defaults to 0.5.
 
     Returns:
