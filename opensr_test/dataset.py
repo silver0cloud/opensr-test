@@ -2,7 +2,8 @@ import pathlib
 import pickle
 from typing import List, Literal, Optional
 
-import numpy as np
+import jax
+import jax.numpy as jnp
 import requests
 import torch
 from opensr_test.utils import get_data_path
