@@ -1,5 +1,7 @@
 from typing import Any, List, Literal, Optional, Union
 
+import jax 
+import jax.numpy as jnp
 import torch
 from pydantic import BaseModel, field_validator, model_validator
 
